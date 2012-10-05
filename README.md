@@ -1,4 +1,4 @@
-rocketstat
-==========
+rocketstat has moved!
+======================
 
-redir for objectrocket's rocketstat
+please use: https://github.com/objectrocket/rocketstat
