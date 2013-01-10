@@ -22,6 +22,7 @@ class RocketStat:
         parser.add_option("--hostname", dest="hostname",help="hostname to connect to")
         parser.add_option("--port",dest="port",type=int,help="port to connect to")
         parser.add_option("--api_key",dest="api_key",help="ObjectRocket API key.  See www.objectrocket.com for an account")
+        parser.add_option("--profiler",dest="profiler",action="store_true",help="Output Profiler Data vs Opcounter Data")
         (options, args) = parser.parse_args()
 
         self.hostname = options.hostname
@@ -75,7 +76,7 @@ class RocketStat:
             instance = data["instance"]
             zone = data["zone"]
     
-            lok = round(float(data['globalLock']['ratio']),2)
+            #lok = round(float(data['globalLock']['ratio']),2)
             lkct = data['globalLock']["currentQueue"]['total']
             lkcr = data['globalLock']["currentQueue"]['readers']
             lkcw = data['globalLock']["currentQueue"]['writers']
